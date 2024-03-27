@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-header.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <title>Chelseafc</title>
 </head>
@@ -41,9 +41,44 @@
                 <li><a href="#"></a>SHOP</li>
                     <a href="#"><i class="fas fa-search"></i></a>
                     <span class="separator"></span>
-                    <a href="#"><i class="fas fa-bars"></i></a>
+                    <a class="targets-menu" href="#"><i class="fas fa-bars"></i></a>
             </ul>
         </nav>
     </header>
+    <main>
+        <div class="image-container">
+            <img src="Chelsea_Women_vs_Ajax_-_Cuthbert.webp" alt="Chelsea Women vs Ajax - Cuthbert">
+            <div class="text-overlay">
+                <h6 class="red">LIVE</h6>
+                <p>UEFA WOMEN'S CHAMPIONS LEAGUE</p>
+                <div class="match">
+                    <img class="small-logo large" src="Chelsea-Logo.png">
+                    <p>1 - 1</p>
+                    <img class="small-logo" src="Ajax_Amsterdam.svg.png"> 
+                </div>
+                <p>AGG</p>
+                <h6>4-1</h6>
+                <a class="match-predicted" href="#">Match Centre <span class="separator"></span><i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </main>
+
+    <button onclick="scrollTOTop()" id="scrollBtn" title="comeback">&#8593;</button>
+    <script>
+        function scrollTOTop(){
+            window, scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        window.addEventListener('scroll', function() {
+            var scrollBtn = document.getElementById("scrollBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
