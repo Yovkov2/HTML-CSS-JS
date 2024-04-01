@@ -111,6 +111,9 @@ nav{
     height: 50px;
     cursor: pointer;
 }
+a{
+    cursor: pointer;
+}
 .targets-menu{
     background: blue;
     color: white;
@@ -119,4 +122,39 @@ nav{
 
 #scrollBtn:focus {
     outline: none;
+}
+.sponsors-carousel{
+    overflow: hidden;
+    width: 100%;
+    margin-top: 20px;
+}
+.sponsors{
+    display: flex;
+    animation: marquee 10s linear infinite;
+}
+.sponsors{
+    margin-right: 20px;
+    height: 100px;
+}
+@keyframes marquee {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); } 
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
 }
