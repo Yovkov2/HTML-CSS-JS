@@ -118,23 +118,53 @@
             </div>
         </div>
     </main>
+    <main>
+        <div class="swap">
+            <div class="slide active">
+                <img src="maxresdefault.jpg" class="swaps">
+                <h2 class="slide-text">Chelsea with another mistake</h2>
+            </div>
+            <div class="slide">
+                <img src="1738063.webp" class="swaps">
+                <h2 class="slide-text">The coach's weak changes</h2>
+            </div>
+            <div class="slide">
+                <img src="Cole-Palmer-SR-Feature.jpg" class="swaps">
+                <h2 class="slide-text">The new favorite of the team</h2>
+            </div>
+        </div>
+    </main>
 
     <button onclick="scrollTOTop()" id="scrollBtn" title="comeback">&#8593;</button>
     <script>
         function scrollTOTop(){
-            window, scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-        window.addEventListener('scroll', function() {
-            var scrollBtn = document.getElementById("scrollBtn");
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollBtn.style.display = "block";
-            } else {
-                scrollBtn.style.display = "none";
-            }
-        });
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+window.addEventListener('scroll', function() {
+    var scrollBtn = document.getElementById("scrollBtn");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollBtn.style.display = "block";
+    } else {
+        scrollBtn.style.display = "none";
+    }
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        slides[index].classList.add('active');
+    }
+    setInterval(function () {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }, 5000); 
+});
     </script>
 </body>
 </html>

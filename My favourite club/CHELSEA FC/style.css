@@ -12,15 +12,15 @@
     display: flex;
     align-items: center;
 }
-a{
+header a{
     text-decoration: none;
 }
 .forms{
     margin-right: 20px;
 }
-.left{
+.left {
     margin: 20px;
-    margin-left: 15pdx;
+    margin-left: 15px;
     padding: 5px;
 }
 .separator{
@@ -179,4 +179,21 @@ a{
 .submenu img{
     width: 400px;
     margin-right: 10px;
+}
+.swaps {
+    width: 60%;
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+}
+.slide {
+    display: none;
+}
+
+.slide.active {
+    display: block;
+}
+.slide-text{
+    text-align: center;
+    font-size: 30px;
 }
